@@ -27,7 +27,7 @@
 <hr>
 
 An accessible and versatile drawer component for React. This drawer is just a few new styles
-on top of [@accessible/drawer](https://github.com/accessible-ui/drawer) so when using both,
+on top of [@accessible/modal](https://github.com/accessible-ui/modal) so when using both,
 the drawer costs you nothing.
 
 ## Features
