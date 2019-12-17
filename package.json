@@ -1,16 +1,26 @@
 {
   "name": "@accessible/drawer",
   "version": "1.0.0",
-  "homepage": "https://github.com/jaredLunde/accessible#readme",
-  "repository": "github:jaredLunde/accessible",
-  "bugs": "https://github.com/jaredLunde/accessible/issues",
-  "author": "Jared Lunde <jared@BeStellar.co> (https://jaredLunde.com)",
+  "homepage": "https://github.com/accessible-ui/drawer#readme",
+  "repository": "github:accessible-ui/drawer",
+  "bugs": "https://github.com/accessible-ui/drawer/issues",
+  "author": "Jared Lunde <jared.lunde@gmail.com> (https://jaredLunde.com)",
   "license": "MIT",
-  "description": "",
+  "description": "An accessible and versatile drawer component for React",
   "keywords": [
     "react",
     "react component",
-    "drawer"
+    "drawer",
+    "accessible drawer",
+    "a11y drawer",
+    "react a11y drawer",
+    "react accessible drawer",
+    "react drawer",
+    "react drawer component",
+    "a11y",
+    "react aria drawer",
+    "aria",
+    "aria drawer"
   ],
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
@@ -55,6 +65,8 @@
     "@types/react-dom": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
+    "babel-plugin-optimize-react": "^0.0.4",
+    "babel-plugin-typescript-to-proptypes": "^1.1.0",
     "cross-env": "latest",
     "eslint": "latest",
     "eslint-import-resolver-jest": "latest",
@@ -70,8 +82,16 @@
     "react-test-renderer": "latest",
     "rimraf": "^2.6.3",
     "ts-jest": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "typescript-to-proptypes": "^1.4.0"
   },
-  "dependencies": {},
-  "peerDependencies": {}
+  "dependencies": {
+    "@accessible/modal": "^1.1.0",
+    "@reach/auto-id": "^0.6.1",
+    "@react-hook/merged-ref": "^1.0.6"
+  },
+  "peerDependencies": {
+    "react": ">=16.8",
+    "prop-types": ">=15.7.2"
+  }
 }
