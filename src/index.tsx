@@ -3,10 +3,14 @@ import {Dialog, DialogProps} from '@accessible/modal'
 export {
   Modal as Drawer,
   ModalContext as DrawerContext,
+  ModalContextValue as DrawerContextValue,
+  ModalProps as DrawerProps,
   useModal as useDrawer,
   ModalConsumer as DrawerConsumer,
   Trigger,
+  TriggerProps,
   Close,
+  CloseProps,
   useIsOpen,
   useControls,
 } from '@accessible/modal'
