@@ -2,9 +2,9 @@ import React from 'react'
 import {Dialog, DialogProps} from '@accessible/modal'
 export {
   Modal as Drawer,
+  ModalProps as DrawerProps,
   ModalContext as DrawerContext,
   ModalContextValue as DrawerContextValue,
-  ModalProps as DrawerProps,
   useModal as useDrawer,
   ModalConsumer as DrawerConsumer,
   Trigger,
@@ -13,6 +13,7 @@ export {
   CloseProps,
   useIsOpen,
   useControls,
+  ModalControls as DrawerControls,
 } from '@accessible/modal'
 
 const __DEV__ =
