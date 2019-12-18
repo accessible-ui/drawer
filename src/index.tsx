@@ -1,24 +1,32 @@
 import React from 'react'
-import {Dialog, DialogProps} from '@accessible/modal'
+import {
+  Dialog,
+  DialogProps,
+  ModalControls,
+  CloseProps as CloseProps_,
+  TriggerProps as TriggerProps_,
+  ModalProps,
+  ModalContextValue,
+} from '@accessible/modal'
 export {
   Modal as Drawer,
-  ModalProps as DrawerProps,
   ModalContext as DrawerContext,
-  ModalContextValue as DrawerContextValue,
-  useModal as useDrawer,
   ModalConsumer as DrawerConsumer,
+  useModal as useDrawer,
   Trigger,
-  TriggerProps,
   Close,
-  CloseProps,
   useIsOpen,
   useControls,
-  ModalControls as DrawerControls,
 } from '@accessible/modal'
 
 const __DEV__ =
   typeof process !== 'undefined' && process.env.NODE_ENV !== 'production'
 
+export interface DrawerContextValue extends ModalContextValue {}
+export interface DrawerProps extends ModalProps {}
+export interface DrawerControls extends ModalControls {}
+export interface TriggerProps extends TriggerProps_ {}
+export interface TriggerProps extends CloseProps_ {}
 export interface ContentProps extends DialogProps {
   placement?: 'top' | 'right' | 'bottom' | 'left'
 }
