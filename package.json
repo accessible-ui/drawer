@@ -1,6 +1,6 @@
 {
   "name": "@accessible/drawer",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "homepage": "https://github.com/accessible-ui/drawer#readme",
   "repository": "github:accessible-ui/drawer",
   "bugs": "https://github.com/accessible-ui/drawer/issues",
@@ -86,9 +86,7 @@
     "typescript-to-proptypes": "^1.4.0"
   },
   "dependencies": {
-    "@accessible/modal": "^1.1.0",
-    "@reach/auto-id": "^0.6.1",
-    "@react-hook/merged-ref": "^1.0.6"
+    "@accessible/modal": "^1.1.0"
   },
   "peerDependencies": {
     "prop-types": ">=15.7.2",
