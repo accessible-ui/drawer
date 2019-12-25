@@ -36,7 +36,7 @@ the drawer costs you nothing.
   works with CSS-in-JS, SASS, plain CSS, plain `style` objects, anything!
 - **Portal-friendly** The drawer target will render into React portals of your choice when configured
   to do so.
-- **a11y/aria-compliant** This component works with screen readers out of the target and manages
+- **a11y/aria-compliant** This component works with screen readers out of the box and manages
   focus for you.
 
 ## Quick Start
