@@ -1,16 +1,16 @@
 /* jest */
 import * as React from 'react'
 import {render, fireEvent, cleanup} from '@testing-library/react'
-import {Drawer, Content, Trigger} from './index'
+import {Drawer, Target, Trigger} from './index'
 
-describe('<Content>', () => {
+describe('<Target>', () => {
   it('should open and close on Trigger click', () => {
     for (const placement of ['top', 'right', 'bottom', 'left']) {
       const result = render(
         <Drawer>
-          <Content placement={placement}>
+          <Target placement={placement as 'top' | 'right' | 'bottom' | 'left'}>
             <div>Hello world</div>
-          </Content>
+          </Target>
 
           <Trigger>
             <button>open me</button>
@@ -30,9 +30,9 @@ describe('<Content>', () => {
   it('should open on the left by default', () => {
     const result = render(
       <Drawer>
-        <Content>
+        <Target>
           <div>Hello world</div>
-        </Content>
+        </Target>
 
         <Trigger>
           <button>open me</button>

@@ -1,33 +1,33 @@
-import React from 'react'
+import {FC, createElement, cloneElement} from 'react'
 import {
-  Dialog,
-  DialogProps,
-  ModalControls,
-  CloseProps as CloseProps_,
-  TriggerProps as TriggerProps_,
-  ModalProps,
-  ModalContextValue,
-} from '@accessible/modal'
+  Target as CollapseTarget,
+  TargetProps as CollapseTargetProps,
+  CollapseControls,
+  CloseProps as CollapseCloseProps,
+  TriggerProps as CollapseTriggerProps,
+  CollapseProps,
+  CollapseContextValue,
+} from '@accessible/collapse'
 export {
-  Modal as Drawer,
-  ModalContext as DrawerContext,
-  ModalConsumer as DrawerConsumer,
-  useModal as useDrawer,
-  Trigger,
+  Collapse as Drawer,
+  CollapseContext as DrawerContext,
+  CollapseConsumer as DrawerConsumer,
+  useCollapse as useDrawer,
   Close,
+  Trigger,
   useIsOpen,
   useControls,
-} from '@accessible/modal'
+} from '@accessible/collapse'
 
 const __DEV__ =
   typeof process !== 'undefined' && process.env.NODE_ENV !== 'production'
 
-export interface DrawerContextValue extends ModalContextValue {}
-export interface DrawerProps extends ModalProps {}
-export interface DrawerControls extends ModalControls {}
-export interface TriggerProps extends TriggerProps_ {}
-export interface TriggerProps extends CloseProps_ {}
-export interface ContentProps extends DialogProps {
+export interface DrawerContextValue extends CollapseContextValue {}
+export interface DrawerProps extends CollapseProps {}
+export interface DrawerControls extends CollapseControls {}
+export interface TriggerProps extends CollapseTriggerProps {}
+export interface CloseProps extends CollapseCloseProps {}
+export interface TargetProps extends CollapseTargetProps {
   placement?: 'top' | 'right' | 'bottom' | 'left'
 }
 
@@ -70,25 +70,38 @@ const defaultOpenStyles = {
   transform: 'translate3d(0, 0, 0)',
 }
 
-export const Content: React.FC<ContentProps> = ({
+const defaultStyles = {
+  position: 'fixed',
+  margin: 'auto',
+  left: '50%',
+  top: '50%',
+  transform: 'translate3d(-50%, -50%, 0)',
+  zIndex: 1,
+}
+
+export const Target: FC<TargetProps> = ({
   placement = 'left',
   openStyle,
-  closedStyle,
   ...props
-}) => (
-  <Dialog
-    closedStyle={Object.assign({}, defaultClosedStyles[placement], closedStyle)}
-    openStyle={Object.assign(
-      {},
-      defaultClosedStyles[placement],
-      defaultOpenStyles,
-      openStyle
-    )}
-    {...props}
-  />
-)
+}) => {
+  const childProps = props.children.props
+  return createElement(
+    CollapseTarget,
+    Object.assign(props, {
+      openStyle: Object.assign({}, defaultOpenStyles, openStyle),
+    }),
+    cloneElement(props.children, {
+      style: Object.assign(
+        {},
+        defaultStyles,
+        defaultClosedStyles[placement],
+        childProps.style
+      ),
+    })
+  )
+}
 
 /* istanbul ignore next */
 if (__DEV__) {
-  Content.displayName = 'Content'
+  Target.displayName = 'Target'
 }

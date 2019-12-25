@@ -1,298 +1,251 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Content> should open and close on Trigger click: closed 1`] = `
+exports[`<Target> should open and close on Trigger click: closed 1`] = `
 <DocumentFragment>
   <div
     aria-hidden="true"
-    aria-modal="false"
-    id="modal--1"
-    role="dialog"
+    id="collapse--0"
     style="visibility: hidden; position: fixed; margin: 0px; left: 0px; top: 0px; transform: translate3d(0, -100%, 0); z-index: 1; right: 0px;"
   >
     Hello world
   </div>
   <button
-    aria-controls="modal--1"
+    aria-controls="collapse--0"
     aria-expanded="false"
-    aria-haspopup="dialog"
   >
     open me
   </button>
 </DocumentFragment>
 `;
 
-exports[`<Content> should open and close on Trigger click: closed 2`] = `
+exports[`<Target> should open and close on Trigger click: closed 2`] = `
 <DocumentFragment>
   <div
     aria-hidden="true"
-    aria-modal="false"
-    id="modal--5"
-    role="dialog"
+    id="collapse--1"
     style="visibility: hidden; position: fixed; margin: 0px; top: 0px; transform: translate3d(100%, 0, 0); z-index: 1; right: 0px; bottom: 0px;"
   >
     Hello world
   </div>
   <button
-    aria-controls="modal--5"
+    aria-controls="collapse--1"
     aria-expanded="false"
-    aria-haspopup="dialog"
   >
     open me
   </button>
 </DocumentFragment>
 `;
 
-exports[`<Content> should open and close on Trigger click: closed 3`] = `
+exports[`<Target> should open and close on Trigger click: closed 3`] = `
 <DocumentFragment>
   <div
     aria-hidden="true"
-    aria-modal="false"
-    id="modal--8"
-    role="dialog"
+    id="collapse--2"
     style="visibility: hidden; position: fixed; margin: 0px; left: 0px; transform: translate3d(0, 100%, 0); z-index: 1; right: 0px; bottom: 0px;"
   >
     Hello world
   </div>
   <button
-    aria-controls="modal--8"
+    aria-controls="collapse--2"
     aria-expanded="false"
-    aria-haspopup="dialog"
   >
     open me
   </button>
 </DocumentFragment>
 `;
 
-exports[`<Content> should open and close on Trigger click: closed 4`] = `
+exports[`<Target> should open and close on Trigger click: closed 4`] = `
 <DocumentFragment>
   <div
     aria-hidden="true"
-    aria-modal="false"
-    id="modal--11"
-    role="dialog"
+    id="collapse--3"
     style="visibility: hidden; position: fixed; margin: 0px; left: 0px; top: 0px; transform: translate3d(-100%, 0, 0); z-index: 1; bottom: 0px;"
   >
     Hello world
   </div>
   <button
-    aria-controls="modal--11"
+    aria-controls="collapse--3"
     aria-expanded="false"
-    aria-haspopup="dialog"
   >
     open me
   </button>
 </DocumentFragment>
 `;
 
-exports[`<Content> should open and close on Trigger click: closed initially 1`] = `
+exports[`<Target> should open and close on Trigger click: closed initially 1`] = `
 <DocumentFragment>
   <div
     aria-hidden="true"
-    aria-modal="false"
-    id="modal--1"
-    role="dialog"
+    id="collapse--0"
     style="visibility: hidden; position: fixed; margin: 0px; left: 0px; top: 0px; transform: translate3d(0, -100%, 0); z-index: 1; right: 0px;"
   >
     Hello world
   </div>
   <button
-    aria-controls="modal--1"
+    aria-controls="collapse--0"
     aria-expanded="false"
-    aria-haspopup="dialog"
   >
     open me
   </button>
 </DocumentFragment>
 `;
 
-exports[`<Content> should open and close on Trigger click: closed initially 2`] = `
+exports[`<Target> should open and close on Trigger click: closed initially 2`] = `
 <DocumentFragment>
   <div
     aria-hidden="true"
-    aria-modal="false"
-    id="modal--5"
-    role="dialog"
+    id="collapse--1"
     style="visibility: hidden; position: fixed; margin: 0px; top: 0px; transform: translate3d(100%, 0, 0); z-index: 1; right: 0px; bottom: 0px;"
   >
     Hello world
   </div>
   <button
-    aria-controls="modal--5"
+    aria-controls="collapse--1"
     aria-expanded="false"
-    aria-haspopup="dialog"
   >
     open me
   </button>
 </DocumentFragment>
 `;
 
-exports[`<Content> should open and close on Trigger click: closed initially 3`] = `
+exports[`<Target> should open and close on Trigger click: closed initially 3`] = `
 <DocumentFragment>
   <div
     aria-hidden="true"
-    aria-modal="false"
-    id="modal--8"
-    role="dialog"
+    id="collapse--2"
     style="visibility: hidden; position: fixed; margin: 0px; left: 0px; transform: translate3d(0, 100%, 0); z-index: 1; right: 0px; bottom: 0px;"
   >
     Hello world
   </div>
   <button
-    aria-controls="modal--8"
+    aria-controls="collapse--2"
     aria-expanded="false"
-    aria-haspopup="dialog"
   >
     open me
   </button>
 </DocumentFragment>
 `;
 
-exports[`<Content> should open and close on Trigger click: closed initially 4`] = `
+exports[`<Target> should open and close on Trigger click: closed initially 4`] = `
 <DocumentFragment>
   <div
     aria-hidden="true"
-    aria-modal="false"
-    id="modal--11"
-    role="dialog"
+    id="collapse--3"
     style="visibility: hidden; position: fixed; margin: 0px; left: 0px; top: 0px; transform: translate3d(-100%, 0, 0); z-index: 1; bottom: 0px;"
   >
     Hello world
   </div>
   <button
-    aria-controls="modal--11"
+    aria-controls="collapse--3"
     aria-expanded="false"
-    aria-haspopup="dialog"
   >
     open me
   </button>
 </DocumentFragment>
 `;
 
-exports[`<Content> should open and close on Trigger click: open 1`] = `
+exports[`<Target> should open and close on Trigger click: open 1`] = `
 <DocumentFragment>
   <div
     aria-hidden="false"
-    aria-modal="false"
-    class="modal--open"
-    id="modal--1"
-    role="dialog"
+    id="collapse--0"
     style="visibility: visible; position: fixed; margin: 0px; left: 0px; top: 0px; transform: translate3d(0, 0, 0); z-index: 1; right: 0px;"
   >
     Hello world
   </div>
   <button
-    aria-controls="modal--1"
+    aria-controls="collapse--0"
     aria-expanded="true"
-    aria-haspopup="dialog"
   >
     open me
   </button>
 </DocumentFragment>
 `;
 
-exports[`<Content> should open and close on Trigger click: open 2`] = `
+exports[`<Target> should open and close on Trigger click: open 2`] = `
 <DocumentFragment>
   <div
     aria-hidden="false"
-    aria-modal="false"
-    class="modal--open"
-    id="modal--5"
-    role="dialog"
+    id="collapse--1"
     style="visibility: visible; position: fixed; margin: 0px; top: 0px; transform: translate3d(0, 0, 0); z-index: 1; right: 0px; bottom: 0px;"
   >
     Hello world
   </div>
   <button
-    aria-controls="modal--5"
+    aria-controls="collapse--1"
     aria-expanded="true"
-    aria-haspopup="dialog"
   >
     open me
   </button>
 </DocumentFragment>
 `;
 
-exports[`<Content> should open and close on Trigger click: open 3`] = `
+exports[`<Target> should open and close on Trigger click: open 3`] = `
 <DocumentFragment>
   <div
     aria-hidden="false"
-    aria-modal="false"
-    class="modal--open"
-    id="modal--8"
-    role="dialog"
+    id="collapse--2"
     style="visibility: visible; position: fixed; margin: 0px; left: 0px; transform: translate3d(0, 0, 0); z-index: 1; right: 0px; bottom: 0px;"
   >
     Hello world
   </div>
   <button
-    aria-controls="modal--8"
+    aria-controls="collapse--2"
     aria-expanded="true"
-    aria-haspopup="dialog"
   >
     open me
   </button>
 </DocumentFragment>
 `;
 
-exports[`<Content> should open and close on Trigger click: open 4`] = `
+exports[`<Target> should open and close on Trigger click: open 4`] = `
 <DocumentFragment>
   <div
     aria-hidden="false"
-    aria-modal="false"
-    class="modal--open"
-    id="modal--11"
-    role="dialog"
+    id="collapse--3"
     style="visibility: visible; position: fixed; margin: 0px; left: 0px; top: 0px; transform: translate3d(0, 0, 0); z-index: 1; bottom: 0px;"
   >
     Hello world
   </div>
   <button
-    aria-controls="modal--11"
+    aria-controls="collapse--3"
     aria-expanded="true"
-    aria-haspopup="dialog"
   >
     open me
   </button>
 </DocumentFragment>
 `;
 
-exports[`<Content> should open on the left by default: closed initially 1`] = `
+exports[`<Target> should open on the left by default: closed initially 1`] = `
 <DocumentFragment>
   <div
     aria-hidden="true"
-    aria-modal="false"
-    id="modal--14"
-    role="dialog"
+    id="collapse--4"
     style="visibility: hidden; position: fixed; margin: 0px; left: 0px; top: 0px; transform: translate3d(-100%, 0, 0); z-index: 1; bottom: 0px;"
   >
     Hello world
   </div>
   <button
-    aria-controls="modal--14"
+    aria-controls="collapse--4"
     aria-expanded="false"
-    aria-haspopup="dialog"
   >
     open me
   </button>
 </DocumentFragment>
 `;
 
-exports[`<Content> should open on the left by default: open 1`] = `
+exports[`<Target> should open on the left by default: open 1`] = `
 <DocumentFragment>
   <div
     aria-hidden="false"
-    aria-modal="false"
-    class="modal--open"
-    id="modal--14"
-    role="dialog"
+    id="collapse--4"
     style="visibility: visible; position: fixed; margin: 0px; left: 0px; top: 0px; transform: translate3d(0, 0, 0); z-index: 1; bottom: 0px;"
   >
     Hello world
   </div>
   <button
-    aria-controls="modal--14"
+    aria-controls="collapse--4"
     aria-expanded="true"
-    aria-haspopup="dialog"
   >
     open me
   </button>

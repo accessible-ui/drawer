@@ -2,14 +2,14 @@
 # yarn lockfile v1
 
 
-"@accessible/modal@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@accessible/modal/-/modal-1.1.0.tgz#7aa1b89bbd832e0096eb43756ac46d8da4b3c4cc"
-  integrity sha512-eM6iNvlAvCSsqPV8NlJ7wWMiUziJYewt1SnnWZTth32wNYOc21C6QgN9zJvI17/DpR6VzhGnEr0IwX317unVTw==
+"@accessible/collapse@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@accessible/collapse/-/collapse-1.0.5.tgz#f4b8d11d9fc1afa952a7d65304fe61176df83636"
+  integrity sha512-7wAgvhKQizEEZ7sFExKZ4rcJYqAf85V0PRbMZgpUpfclFccNpIFhwlJ6N9HMjNF1BsxFecl6P/nEEICZ+9Qlug==
   dependencies:
     "@accessible/use-conditional-focus" "^1.0.0"
-    "@accessible/use-keycode" "^1.0.0"
-    "@reach/auto-id" "^0.6.1"
+    "@accessible/use-id" "^1.0.2"
+    "@accessible/use-keycode" "^1.0.2"
     "@react-hook/merged-ref" "^1.0.7"
     "@react-hook/passive-layout-effect" "^1.0.2"
     "@react-hook/switch" "^1.0.4"
@@ -22,18 +22,25 @@
   integrity sha512-tujs+H5E0K7XoHE5dmNZut9RwdQTt4gmxd3KgXtM5tosKFQvNtAagYCQF8JsWJ9vtgugjk7uPrjZyWiYYaW1JA==
 
 "@accessible/use-conditional-focus@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@accessible/use-conditional-focus/-/use-conditional-focus-1.0.0.tgz#8b1d4eed2e1232664782bafcd312f2b6b07c7cf6"
-  integrity sha512-VSHGPiTWKvpkSJkUSwefBfog8cX5Qt5yQ9T0i/i/94V0d5Y6ns0SePE1FAEMySRbVrl1P1flEmy6ozKvqjJ8ow==
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@accessible/use-conditional-focus/-/use-conditional-focus-1.0.1.tgz#8d4f18d57b3c7c76434b6767148e710f46554409"
+  integrity sha512-XniSYQhRDUt//cVlWDXBM/q2tat6PU+BcoT1eoliKaPo5fo7U+ZgNK4PddsYloCik0hq8xmEF/t6J7b3aHNlpQ==
   dependencies:
     "@accessible/tabbable" "^1.0.4"
     "@react-hook/passive-layout-effect" "^1.0.2"
     raf "^3.4.1"
 
-"@accessible/use-keycode@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@accessible/use-keycode/-/use-keycode-1.0.0.tgz#e0b63e1ae7050c3b05bfe9de6da1de431c95742c"
-  integrity sha512-in2BqzyTS1TVpN2lFZA1JTIQO8l2TmEJXa52mbgfN5JYRI3FQ55RU8EFLyzpjVv4UPzBdg2APW/4QTD2imFy4w==
+"@accessible/use-id@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@accessible/use-id/-/use-id-1.0.2.tgz#53e7fd82ee157a4400db5431b6a5f9dc5d666d3f"
+  integrity sha512-Y248Noj3TMaXgDOyhmzrdH45M6WrNxXFMXaneKx23Oq7Ftx9YJEzcq/leIqgU4yBHBV0qwjzlGYfA5iUorAHIQ==
+  dependencies:
+    "@react-hook/passive-layout-effect" "^1.0.2"
+
+"@accessible/use-keycode@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@accessible/use-keycode/-/use-keycode-1.0.2.tgz#48c33e70d015fe2e3c8753a0433750b9e4ef6a26"
+  integrity sha512-lduCksS4x4AWZsG3XCcaAuEs9IkbJoWjDhA4wpzKXhnl2hMNdZnstdxHYnyu+nnq8V/dpuC9yopZ9uXaLoBUVQ==
   dependencies:
     "@react-hook/passive-layout-effect" "^1.0.2"
 
@@ -1117,15 +1124,10 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@reach/auto-id@^0.6.1":
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/@reach/auto-id/-/auto-id-0.6.1.tgz#af30c153787a335cfb258289537d5ea355688821"
-  integrity sha512-t3uhdZwalO3Mph+CUdFIvMcYsMtRZoBHE5rw/+3UvQxV+AeQGNqmtlOix9mq3rOpxi0KEaf1q4CjWx4myFXkRQ==
-
 "@react-hook/merged-ref@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@react-hook/merged-ref/-/merged-ref-1.0.7.tgz#3e2bf1f6cad5645932140129dfeef6568acd2742"
-  integrity sha512-9hhiI/Ru7++IJiG+yVjyi+ne/6p+GHvk8ldI1eo9y2VLO5Uk0B2+Zs04WVMTLCQOpuw+F8hLJJpjH5clbjW1OQ==
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@react-hook/merged-ref/-/merged-ref-1.0.8.tgz#146deba739df2724f76f4e8a29adbae0e1724994"
+  integrity sha512-ae3HwS/zCDZqoeLliqBPfHc5DeX3bhAR2rsZ2JpDm68c6Lvx05Hs5SOQIQSaRQIsGzFTinoI2TO7LyOcD8s23g==
 
 "@react-hook/passive-layout-effect@^1.0.2":
   version "1.0.2"

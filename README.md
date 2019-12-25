@@ -27,16 +27,16 @@
 <hr>
 
 An accessible and versatile drawer component for React. This drawer is just a few new styles
-on top of [@accessible/modal](https://github.com/accessible-ui/modal) so when using both,
+on top of [@accessible/collapse](https://github.com/accessible-ui/collapse) so when using both,
 the drawer costs you nothing.
 
 ## Features
 
 - **Style-agnostic** You can use this component with the styling library of your choice. It
   works with CSS-in-JS, SASS, plain CSS, plain `style` objects, anything!
-- **Portal-friendly** The drawer content will render into React portals of your choice when configured
+- **Portal-friendly** The drawer target will render into React portals of your choice when configured
   to do so.
-- **a11y/aria-compliant** This component works with screen readers out of the box and manages
+- **a11y/aria-compliant** This component works with screen readers out of the target and manages
   focus for you.
 
 ## Quick Start
@@ -44,17 +44,17 @@ the drawer costs you nothing.
 [Check out the example on CodeSandbox](https://codesandbox.io/s/accessibledrawer-example-y65oq)
 
 ```jsx harmony
-import {Drawer, Content, Trigger, Close} from '@accessible/drawer'
+import {Drawer, Target, Trigger, Close} from '@accessible/drawer'
 
 const Component = () => (
   <Drawer>
-    <Content>
+    <Target>
       <div className="my-drawer">
         <Close>
           <button>Close me</button>
         </Close>
       </div>
-    </Content>
+    </Target>
 
     <Trigger>
       <button>Open me</button>
@@ -67,12 +67,12 @@ const Component = () => (
 
 ### Components
 
-| Component               | Description                                                                                                   |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------- |
-| [`<Drawer>`](#drawer)   | This component creates the context for your drawer box and trigger and contains some configuration options.   |
-| [`<Content>`](#content) | This component wraps any React element and turns it into a drawer box.                                        |
-| [`<Trigger>`](#trigger) | This component wraps any React element and turns it into a drawer trigger.                                    |
-| [`<Close>`](#close)     | This is a convenience component that wraps any React element and adds an onClick handler to close the drawer. |  |
+| Component               | Description                                                                                                    |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------- |
+| [`<Drawer>`](#drawer)   | This component creates the context for your drawer target and trigger and contains some configuration options. |
+| [`<Target>`](#target)   | This component wraps any React element and turns it into a drawer target.                                      |
+| [`<Trigger>`](#trigger) | This component wraps any React element and turns it into a drawer trigger.                                     |
+| [`<Close>`](#close)     | This is a convenience component that wraps any React element and adds an onClick handler to close the drawer.  |  |
 
 ### Hooks
 
@@ -84,7 +84,7 @@ const Component = () => (
 
 ### `<Drawer>`
 
-This component creates the context for your drawer box and trigger and contains some
+This component creates the context for your drawer target and trigger and contains some
 configuration options.
 
 #### Props
@@ -94,38 +94,36 @@ configuration options.
 | defaultOpen | `boolean`                                                                                                                          | `false`     | No        | This sets the default open state of the drawer. By default the drawer is closed.                                                                                                   |
 | open        | `boolean`                                                                                                                          | `undefined` | No        | You can control the open/closed state of the drawer with this prop. When it isn't undefined, this value will take precedence over any calls to `open()`, `close()`, or `toggle()`. |
 | id          | `string`                                                                                                                           | `undefined` | No        | By default this component creates a unique id for you, as it is required for certain aria attributes. Supplying an id here overrides the auto id feature.                          |
-| children    | <code>React.ReactNode &#124; React.ReactNode[] &#124; JSX.Element &#124; ((context: DrawerContextValue) => React.ReactNode)</code> | `undefined` | No        | Your drawer contents and any other children.                                                                                                                                       |
+| children    | <code>React.ReactNode &#124; React.ReactNode[] &#124; JSX.Element &#124; ((context: DrawerContextValue) => React.ReactNode)</code> | `undefined` | No        | Your drawer targets and any other children.                                                                                                                                        |
 
-### `<Content>`
+### `<Target>`
 
-This component wraps any React element and turns it into a drawer content.
+This component wraps any React element and turns it into a drawer target.
 
 #### Props
 
-| Prop          | Type                                                             | Default         | Required? | Description                                                                                                                                                                                                     |
-| ------------- | ---------------------------------------------------------------- | --------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| placement     | <code>"top" &#124; "right" &#124; "bottom" &#124; "left" </code> | `"left"`        | No        | Sets the edge of the `window` you want your drawer content to render on.                                                                                                                                        |
-| portal        | <code>boolean &#124; string </code>                              | `false`         | No        | When `true` this will render the drawer into a React portal with the id `#portals`. You can render it into any portal by providing its query selector here, e.g. `#foobar`, `[data-portal=true]`, or `.foobar`. |
-| closeOnEscape | `boolean`                                                        | `true`          | No        | By default the drawer will close when the `Escape` key is pressed. You can turn this off by providing `false` here.                                                                                             |
-| closedClass   | `string`                                                         | `undefined`     | No        | This class name will be applied to the child element when the drawer is `closed`.                                                                                                                               |
-| openClass     | `string`                                                         | `"modal--open"` | No        | This class name will be applied to the child element when the drawer is `open`.                                                                                                                                 |
-| closedStyle   | `React.CSSProperties`                                            | `undefined`     | No        | These styles will be applied to the child element when the drawer is `closed` in addition to the default styles that set the box's visibility.                                                                  |
-| openStyle     | `React.CSSProperties`                                            | `undefined`     | No        | These styles name will be applied to the child element when the drawer is `open` in addition to the default styles that set the box's visibility.                                                               |
-| children      | `React.ReactElement`                                             | `undefined`     | Yes       | The child is cloned by this component and has aria attributes injected into its props as well as the events defined above.                                                                                      |
+| Prop          | Type                                                             | Default     | Required? | Description                                                                                                                                                                                                     |
+| ------------- | ---------------------------------------------------------------- | ----------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| placement     | <code>"top" &#124; "right" &#124; "bottom" &#124; "left" </code> | `"left"`    | No        | Sets the edge of the `window` you want your drawer target to render on.                                                                                                                                         |
+| portal        | <code>boolean &#124; string </code>                              | `false`     | No        | When `true` this will render the drawer into a React portal with the id `#portals`. You can render it into any portal by providing its query selector here, e.g. `#foobar`, `[data-portal=true]`, or `.foobar`. |
+| closeOnEscape | `boolean`                                                        | `true`      | No        | By default the drawer will close when the `Escape` key is pressed. You can turn this off by providing `false` here.                                                                                             |
+| closedClass   | `string`                                                         | `undefined` | No        | This class name will be applied to the child element when the drawer is `closed`.                                                                                                                               |
+| openClass     | `string`                                                         | `undefined` | No        | This class name will be applied to the child element when the drawer is `open`.                                                                                                                                 |
+| closedStyle   | `React.CSSProperties`                                            | `undefined` | No        | These styles will be applied to the child element when the drawer is `closed` in addition to the default styles that set the target's visibility.                                                               |
+| openStyle     | `React.CSSProperties`                                            | `undefined` | No        | These styles name will be applied to the child element when the drawer is `open` in addition to the default styles that set the target's visibility.                                                            |
+| children      | `React.ReactElement`                                             | `undefined` | Yes       | The child is cloned by this component and has aria attributes injected into its props as well as the events defined above.                                                                                      |
 
 #### Example
 
 ```jsx harmony
-<Content>
+<Target>
   <div className="alert">Alert</div>
-</Content>
+</Target>
 
 // <div
 //   class="alert"
 //   aria-hidden="true"
-//   aria-drawer="false"
-//   id="modal--12"
-//   role="content"
+//   id="collapse--12"
 //   style="visibility: hidden; position: fixed; margin: auto; left: 0px; right: 0px; top: 50%; transform: translateY(-50%); z-index: 1;"
 // >
 //   Alert
@@ -135,7 +133,7 @@ This component wraps any React element and turns it into a drawer content.
 ### `<Trigger>`
 
 This component wraps any React element and adds an `onClick` handler which toggles the open state
-of the drawer content.
+of the drawer target.
 
 #### Props
 
@@ -154,8 +152,7 @@ of the drawer content.
 
 // <button
 //   class="my-button"
-//   aria-controls="modal--12"
-//   aria-haspopup="content"
+//   aria-controls="collapse--12"
 //   aria-expanded="false"
 // >
 //   Open me!
@@ -179,8 +176,7 @@ This is a convenience component that wraps any React element and adds an onClick
 
 // <button
 //   class="my-button"
-//   aria-controls="modal--12"
-//   aria-haspopup="content"
+//   aria-controls="collapse--12"
 //   aria-expanded="false"
 // >
 //   Close me
@@ -222,11 +218,11 @@ This hook provides access to the drawer's `open`, `close`, and `toggle` function
 const Component = () => {
   const {open, close, toggle} = useControls()
   return (
-    <Content>
+    <Target>
       <div className="my-drawer">
         <button onClick={close}>Close me</button>
       </div>
-    </Content>
+    </Target>
   )
 }
 ```
@@ -241,9 +237,9 @@ This hook provides access to the drawer's `isOpen` value
 const Component = () => {
   const isOpen = useIsOpen()
   return (
-    <Content>
+    <Target>
       <div className="my-drawer">Am I open? {isOpen ? 'Yes' : 'No'}</div>
-    </Content>
+    </Target>
   )
 }
 ```
