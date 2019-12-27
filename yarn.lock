@@ -2,13 +2,13 @@
 # yarn lockfile v1
 
 
-"@accessible/collapse@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@accessible/collapse/-/collapse-1.0.5.tgz#f4b8d11d9fc1afa952a7d65304fe61176df83636"
-  integrity sha512-7wAgvhKQizEEZ7sFExKZ4rcJYqAf85V0PRbMZgpUpfclFccNpIFhwlJ6N9HMjNF1BsxFecl6P/nEEICZ+9Qlug==
+"@accessible/collapse@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@accessible/collapse/-/collapse-1.0.9.tgz#7bcf5b88996054ed0081e97f24801c3ab98378de"
+  integrity sha512-rQoNarQu6j8Yn5FC97EHmSEQcBITNUmUp03UpP9eqUKYzZDsfG+dg6E3IzGUfsECyBdImS1Z8VAk/GoIsJwZgg==
   dependencies:
     "@accessible/use-conditional-focus" "^1.0.0"
-    "@accessible/use-id" "^1.0.2"
+    "@accessible/use-id" "^1.0.3"
     "@accessible/use-keycode" "^1.0.2"
     "@react-hook/merged-ref" "^1.0.7"
     "@react-hook/passive-layout-effect" "^1.0.2"
@@ -30,10 +30,10 @@
     "@react-hook/passive-layout-effect" "^1.0.2"
     raf "^3.4.1"
 
-"@accessible/use-id@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@accessible/use-id/-/use-id-1.0.2.tgz#53e7fd82ee157a4400db5431b6a5f9dc5d666d3f"
-  integrity sha512-Y248Noj3TMaXgDOyhmzrdH45M6WrNxXFMXaneKx23Oq7Ftx9YJEzcq/leIqgU4yBHBV0qwjzlGYfA5iUorAHIQ==
+"@accessible/use-id@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@accessible/use-id/-/use-id-1.0.3.tgz#e2ce99584a3239c49ce6541ac9edec71724d0e87"
+  integrity sha512-a4YsYCZlOXNvQhSb1Zm2MgDdzdSJ+HqHQceF+EntyhjJ5YTv+jlxi7SQL5gZBqzMD6PmyyX4ogb1WT1IgNmfqA==
   dependencies:
     "@react-hook/passive-layout-effect" "^1.0.2"
 
