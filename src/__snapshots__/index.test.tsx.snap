@@ -12,6 +12,8 @@ exports[`<Target> should open and close on Trigger click: closed 1`] = `
   <button
     aria-controls="🅰0"
     aria-expanded="false"
+    role="button"
+    tabindex="0"
   >
     open me
   </button>
@@ -30,6 +32,8 @@ exports[`<Target> should open and close on Trigger click: closed 2`] = `
   <button
     aria-controls="🅰1"
     aria-expanded="false"
+    role="button"
+    tabindex="0"
   >
     open me
   </button>
@@ -48,6 +52,8 @@ exports[`<Target> should open and close on Trigger click: closed 3`] = `
   <button
     aria-controls="🅰2"
     aria-expanded="false"
+    role="button"
+    tabindex="0"
   >
     open me
   </button>
@@ -66,6 +72,8 @@ exports[`<Target> should open and close on Trigger click: closed 4`] = `
   <button
     aria-controls="🅰3"
     aria-expanded="false"
+    role="button"
+    tabindex="0"
   >
     open me
   </button>
@@ -84,6 +92,8 @@ exports[`<Target> should open and close on Trigger click: closed initially 1`] =
   <button
     aria-controls="🅰0"
     aria-expanded="false"
+    role="button"
+    tabindex="0"
   >
     open me
   </button>
@@ -102,6 +112,8 @@ exports[`<Target> should open and close on Trigger click: closed initially 2`] =
   <button
     aria-controls="🅰1"
     aria-expanded="false"
+    role="button"
+    tabindex="0"
   >
     open me
   </button>
@@ -120,6 +132,8 @@ exports[`<Target> should open and close on Trigger click: closed initially 3`] =
   <button
     aria-controls="🅰2"
     aria-expanded="false"
+    role="button"
+    tabindex="0"
   >
     open me
   </button>
@@ -138,6 +152,8 @@ exports[`<Target> should open and close on Trigger click: closed initially 4`] =
   <button
     aria-controls="🅰3"
     aria-expanded="false"
+    role="button"
+    tabindex="0"
   >
     open me
   </button>
@@ -156,6 +172,8 @@ exports[`<Target> should open and close on Trigger click: open 1`] = `
   <button
     aria-controls="🅰0"
     aria-expanded="true"
+    role="button"
+    tabindex="0"
   >
     open me
   </button>
@@ -174,6 +192,8 @@ exports[`<Target> should open and close on Trigger click: open 2`] = `
   <button
     aria-controls="🅰1"
     aria-expanded="true"
+    role="button"
+    tabindex="0"
   >
     open me
   </button>
@@ -192,6 +212,8 @@ exports[`<Target> should open and close on Trigger click: open 3`] = `
   <button
     aria-controls="🅰2"
     aria-expanded="true"
+    role="button"
+    tabindex="0"
   >
     open me
   </button>
@@ -210,6 +232,8 @@ exports[`<Target> should open and close on Trigger click: open 4`] = `
   <button
     aria-controls="🅰3"
     aria-expanded="true"
+    role="button"
+    tabindex="0"
   >
     open me
   </button>
@@ -228,6 +252,8 @@ exports[`<Target> should open on the left by default: closed initially 1`] = `
   <button
     aria-controls="🅰4"
     aria-expanded="false"
+    role="button"
+    tabindex="0"
   >
     open me
   </button>
@@ -246,6 +272,8 @@ exports[`<Target> should open on the left by default: open 1`] = `
   <button
     aria-controls="🅰4"
     aria-expanded="true"
+    role="button"
+    tabindex="0"
   >
     open me
   </button>

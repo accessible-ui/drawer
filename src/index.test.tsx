@@ -3,6 +3,12 @@ import * as React from 'react'
 import {render, fireEvent, cleanup} from '@testing-library/react'
 import {Drawer, Target, Trigger} from './index'
 
+const click_ = fireEvent.click
+fireEvent.click = (...args) => {
+  fireEvent.mouseDown(...args)
+  return click_(...args)
+}
+
 describe('<Target>', () => {
   it('should open and close on Trigger click', () => {
     for (const placement of ['top', 'right', 'bottom', 'left']) {
