@@ -1,33 +1,33 @@
 import {FC, createElement, cloneElement} from 'react'
 import {
-  Target as CollapseTarget,
-  TargetProps as CollapseTargetProps,
-  CollapseControls,
-  CloseProps as CollapseCloseProps,
-  TriggerProps as CollapseTriggerProps,
-  CollapseProps,
-  CollapseContextValue,
-} from '@accessible/collapse'
+  Target as DisclosureTarget,
+  TargetProps as DisclosureTargetProps,
+  DisclosureControls,
+  CloseProps as DisclosureCloseProps,
+  TriggerProps as DisclosureTriggerProps,
+  DisclosureProps,
+  DisclosureContextValue,
+} from '@accessible/disclosure'
 export {
-  Collapse as Drawer,
-  CollapseContext as DrawerContext,
-  CollapseConsumer as DrawerConsumer,
-  useCollapse as useDrawer,
+  Disclosure as Drawer,
+  DisclosureContext as DrawerContext,
+  DisclosureConsumer as DrawerConsumer,
+  useDisclosure as useDrawer,
   Close,
   Trigger,
   useIsOpen,
   useControls,
-} from '@accessible/collapse'
+} from '@accessible/disclosure'
 
 const __DEV__ =
   typeof process !== 'undefined' && process.env.NODE_ENV !== 'production'
 
-export interface DrawerContextValue extends CollapseContextValue {}
-export interface DrawerProps extends CollapseProps {}
-export interface DrawerControls extends CollapseControls {}
-export interface TriggerProps extends CollapseTriggerProps {}
-export interface CloseProps extends CollapseCloseProps {}
-export interface TargetProps extends CollapseTargetProps {
+export interface DrawerContextValue extends DisclosureContextValue {}
+export interface DrawerProps extends DisclosureProps {}
+export interface DrawerControls extends DisclosureControls {}
+export interface TriggerProps extends DisclosureTriggerProps {}
+export interface CloseProps extends DisclosureCloseProps {}
+export interface TargetProps extends DisclosureTargetProps {
   placement?: 'top' | 'right' | 'bottom' | 'left'
 }
 
@@ -85,7 +85,7 @@ export const Target: FC<TargetProps> = ({
 }) => {
   const childProps = props.children.props
   return createElement(
-    CollapseTarget,
+    DisclosureTarget,
     Object.assign(props, {
       openStyle: Object.assign({}, defaultOpenStyles, openStyle),
     }),
