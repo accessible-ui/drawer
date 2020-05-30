@@ -1,9 +1,9 @@
 {
   "name": "@accessible/drawer",
-  "version": "2.2.0",
-  "homepage": "https://github.com/accessible-ui/accessible#readme",
-  "repository": "github:accessible-ui/accessible",
-  "bugs": "https://github.com/accessible-ui/accessible/issues",
+  "version": "2.2.1",
+  "homepage": "https://github.com/accessible-ui/drawer#readme",
+  "repository": "github:accessible-ui/drawer",
+  "bugs": "https://github.com/accessible-ui/drawer/issues",
   "author": "Jared Lunde <jared.lunde@gmail.com> (https://jaredLunde.com)",
   "license": "MIT",
   "description": "An accessible and versatile drawer component for React",
