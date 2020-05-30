@@ -1,13 +1,8 @@
 /* jest */
 import * as React from 'react'
-import {render, fireEvent, cleanup} from '@testing-library/react'
+import {render, cleanup} from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import {Drawer, Target, Trigger} from './index'
-
-const click_ = fireEvent.click
-fireEvent.click = (...args) => {
-  fireEvent.mouseDown(...args)
-  return click_(...args)
-}
 
 describe('<Target>', () => {
   it('should open and close on Trigger click', () => {
@@ -25,11 +20,12 @@ describe('<Target>', () => {
       )
 
       expect(result.asFragment()).toMatchSnapshot('closed initially')
-      fireEvent.click(result.getByText('open me'))
+      userEvent.click(result.getByRole('button'))
       expect(result.asFragment()).toMatchSnapshot('open')
-      fireEvent.click(result.getByText('open me'))
+      userEvent.click(result.getByRole('button'))
       expect(result.asFragment()).toMatchSnapshot('closed')
       cleanup()
+      document.getElementsByTagName('html')[0].innerHTML = ''
     }
   })
 
@@ -47,7 +43,7 @@ describe('<Target>', () => {
     )
 
     expect(result.asFragment()).toMatchSnapshot('closed initially')
-    fireEvent.click(result.getByText('open me'))
+    userEvent.click(result.getByRole('button'))
     expect(result.asFragment()).toMatchSnapshot('open')
   })
 })

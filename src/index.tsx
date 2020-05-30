@@ -1,4 +1,4 @@
-import {FC, createElement, cloneElement} from 'react'
+import * as React from 'react'
 import {
   Target as DisclosureTarget,
   TargetProps as DisclosureTargetProps,
@@ -21,15 +21,6 @@ export {
 
 const __DEV__ =
   typeof process !== 'undefined' && process.env.NODE_ENV !== 'production'
-
-export interface DrawerContextValue extends DisclosureContextValue {}
-export interface DrawerProps extends DisclosureProps {}
-export interface DrawerControls extends DisclosureControls {}
-export interface TriggerProps extends DisclosureTriggerProps {}
-export interface CloseProps extends DisclosureCloseProps {}
-export interface TargetProps extends DisclosureTargetProps {
-  placement?: 'top' | 'right' | 'bottom' | 'left'
-}
 
 const defaultClosedStyles = {
   top: {
@@ -78,18 +69,18 @@ const defaultStyles = {
   transform: 'translate3d(-50%, -50%, 0)',
 }
 
-export const Target: FC<TargetProps> = ({
+export const Target: React.FC<TargetProps> = ({
   placement = 'left',
   openStyle,
   ...props
 }) => {
   const childProps = props.children.props
-  return createElement(
+  return React.createElement(
     DisclosureTarget,
     Object.assign(props, {
       openStyle: Object.assign({}, defaultOpenStyles, openStyle),
     }),
-    cloneElement(props.children, {
+    React.cloneElement(props.children, {
       style: Object.assign(
         {},
         defaultStyles,
@@ -98,6 +89,15 @@ export const Target: FC<TargetProps> = ({
       ),
     })
   )
+}
+
+export interface DrawerContextValue extends DisclosureContextValue {}
+export interface DrawerProps extends DisclosureProps {}
+export interface DrawerControls extends DisclosureControls {}
+export interface TriggerProps extends DisclosureTriggerProps {}
+export interface CloseProps extends DisclosureCloseProps {}
+export interface TargetProps extends DisclosureTargetProps {
+  placement?: 'top' | 'right' | 'bottom' | 'left'
 }
 
 /* istanbul ignore next */
