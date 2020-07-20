@@ -1,0 +1,13 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## 3.0.0 (2020-07-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* Renames useTarget() to useA11yTarget(), useTrigger() to useA11yTrigger(),
+useCloseButton() to useA11yCloseButton()
+
+* add new hooks and update disclosure ([5447699](https://github.com/accessible-ui/drawer/commit/544769924f8752109d6c5cc2261834f4b150a5c3))
