@@ -149,6 +149,7 @@
     "typescript": "latest"
   },
   "dependencies": {
+    "@accessible/button": "^2.0.2",
     "@accessible/disclosure": "^3.0.1"
   },
   "peerDependencies": {
